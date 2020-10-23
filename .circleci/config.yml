@@ -6,6 +6,7 @@ jobs:
   test:
     executor:
       name: node/default
+    working_directory: ~/repo
     steps:
       - checkout
       - run:
@@ -20,6 +21,7 @@ jobs:
       - run:
           name: Run tests
           command: npm start
+
       - store_artifacts:
           path: ./screenshots/
       - store_artifacts:
