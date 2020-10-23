@@ -1,23 +1,9 @@
 version: 2.1
+
 orbs:
-  browser-tools: circleci/browser-tools@1.1.0
-  node: circleci/node@4.1.0
-  cypress: cypress-io/cypress@1.26.0
-jobs:
-  test:
-    executor:
-      name: node/default
-    steps:
-      - checkout
-      - browser-tools/install-browser-tools
-      - node/install-packages
-      - run:
-          name: Check lint
-          command: npm run lint
-      - run:
-          name: Start tests
-          command: npm start
+  cypress: cypress-io/cypress@1.1.0
+
 workflows:
-    main:
-      jobs:
-        - test
+  build:
+    jobs:
+      - cypress/run
