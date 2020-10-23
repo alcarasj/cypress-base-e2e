@@ -18,7 +18,7 @@ jobs:
           name: Check lint
           command: npm run lint
       - run:
-          name: npm start
+          command: npm start
 workflows:
     main:
       jobs:
