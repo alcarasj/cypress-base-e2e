@@ -1,10 +1,6 @@
 language: node_js
 node_js:
-  - 10
-addons:
-  apt:
-    packages:
-      - libgconf-2-4
+  - node
 cache:
   npm: true
   directories:
@@ -14,4 +10,4 @@ install:
 before_script:
   - npm run lint
 script:
-  - $(npm bin)/cypress run --record
+  - npm start
