@@ -18,3 +18,7 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+before(() => {
+  cy.login(Cypress.env('EMAIL'), Cypress.env('PASSWORD'));
+});
