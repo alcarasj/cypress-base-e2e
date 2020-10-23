@@ -8,11 +8,11 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm ci
-            - run: npm run lint
-            - run: npm test
+      - node/install-packages
+      - run:
+          command: npm run lint
+      - run:
+          command: npm start
 workflows:
     main:
       jobs:
