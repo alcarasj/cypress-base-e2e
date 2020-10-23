@@ -1,5 +1,6 @@
 /* eslint cypress/no-unnecessary-waiting: 0 */
 
+/**
 const getCookiesModalDocument = () => cy
   .get(`iframe[title="TrustArc Cookie Consent Manager"]`)
   .its('0.contentDocument').should('exist');
@@ -7,6 +8,7 @@ const getCookiesModalDocument = () => cy
 const getCookiesModalBody = () => getCookiesModalDocument()
   .its('body').should('not.be.undefined')
   .then(cy.wrap);
+**/
 
 Cypress.Commands.add('login', (email, password) => {
   cy.wait(7500);
