@@ -1,3 +1,5 @@
+/* eslint cypress/no-unnecessary-waiting: 0 */
+
 const getCookiesModalDocument = () => cy
   .get(`iframe[title="TrustArc Cookie Consent Manager"]`)
   .its('0.contentDocument').should('exist');
