@@ -18,7 +18,12 @@ jobs:
           name: Check lint
           command: npm run lint
       - run:
+          name: Run tests
           command: npm start
+      - store_artifacts:
+          path: ./screenshots/
+      - store_artifacts:
+          path: ./videos/
 workflows:
     main:
       jobs:
