@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "plugins": [
+    "cypress"
+  ],
+  "extends": [
+  	"eslint:recommended",
+    "plugin:cypress/recommended"
+  ],
+  "rules": {
+    "indent": ["error", 2]
+  },
+  "env": {
+    "node": true
+  }
+}

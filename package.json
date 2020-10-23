@@ -1,0 +1,27 @@
+{
+  "name": "cypress-base-e2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cypress run --browser chrome",
+    "lint": "eslint . --fix",
+    "dev": "cypress open",
+    "clean": "rm -rf cypress/screenshots && rm -rf cypress/videos"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alcarasj/cypress-base-e2e.git"
+  },
+  "author": "Jerico Alcaras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alcarasj/cypress-base-e2e/issues"
+  },
+  "homepage": "https://github.com/alcarasj/cypress-base-e2e#readme",
+  "devDependencies": {
+    "cypress": "^5.4.0",
+    "eslint": "^7.11.0",
+    "eslint-plugin-cypress": "^2.11.2"
+  }
+}
