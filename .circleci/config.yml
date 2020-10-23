@@ -12,8 +12,10 @@ jobs:
       - browser-tools/install-browser-tools
       - node/install-packages
       - run:
+          name: Check lint
           command: npm run lint
       - run:
+          name: Start tests
           command: npm start
 workflows:
     main:
