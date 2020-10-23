@@ -11,14 +11,14 @@ const getCookiesModalBody = () => getCookiesModalDocument()
 **/
 
 Cypress.Commands.add('login', (email, password) => {
-  cy.wait(7500);
+  // cy.wait(7500);
   // getCookiesModalBody().find('.mainContent .pdynamicbutton .call').click();
-  cy.wait(5000);
+  // cy.wait(5000);
   cy.get('#userid').type(email, { force: true });
-  cy.wait(5000);
+  // cy.wait(5000);
   cy.get('.login-form__realm-user-id-row .login-form__button.bx--btn.bx--btn--primary').click();
-  cy.wait(5000);
+  // cy.wait(5000);
   cy.get('#password').type(password, { force: true });
-  cy.wait(5000);
+  // cy.wait(5000);
   cy.get('.login-form__password-row .login-form__button.bx--btn.bx--btn--primary').click();
 });
