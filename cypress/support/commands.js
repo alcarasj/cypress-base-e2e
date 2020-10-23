@@ -10,7 +10,7 @@ const getCookiesModalBody = () => getCookiesModalDocument()
 
 Cypress.Commands.add('login', (email, password) => {
   cy.wait(7500);
-  getCookiesModalBody().find('.mainContent .pdynamicbutton .call').click();
+  // getCookiesModalBody().find('.mainContent .pdynamicbutton .call').click();
   cy.wait(5000);
   cy.get('#userid').type(email, { force: true });
   cy.wait(5000);
