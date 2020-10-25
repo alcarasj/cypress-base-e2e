@@ -19,6 +19,10 @@ import './commands'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-beforeEach(() => {
+before(() => {
   cy.login(Cypress.env('EMAIL'), Cypress.env('PASSWORD'));
+});
+
+Cypress.Cookies.defaults({
+  preserve: ['Identity', 'Expiration', 'StartTime', 'LoggedIn'].map(c => `com.ibm.cloud.iam.${c}.prod`)
 });
