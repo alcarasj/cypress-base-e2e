@@ -20,9 +20,16 @@ import './commands'
 // require('./commands')
 
 before(() => {
+  cy.visit('/logout');
   cy.login(Cypress.env('EMAIL'), Cypress.env('PASSWORD'));
 });
 
 Cypress.Cookies.defaults({
-  preserve: ['Identity', 'Expiration', 'StartTime', 'LoggedIn'].map(c => `com.ibm.cloud.iam.${c}.prod`)
+  preserve: ['Identity', 'Expiration', 'StartTime', 'LoggedIn']
+    .map(c => `com.ibm.cloud.iam.${c}.${Cypress.config().baseUrl.includes('test') ? 'test' : 'prod'}`)
+});
+
+// To override failure on uncaught exception from out-of-scope third-party libraries.
+Cypress.on('uncaught:exception', () => {
+  return false;
 });

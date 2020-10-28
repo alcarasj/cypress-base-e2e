@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/alcarasj/cypress-base-e2e#readme",
   "devDependencies": {
-    "cypress": "^5.4.0",
+    "cypress": "^5.5.0",
     "eslint": "^7.11.0",
     "eslint-plugin-cypress": "^2.11.2"
   }
