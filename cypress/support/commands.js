@@ -24,7 +24,7 @@ Cypress.Commands.add('createAccessGroup', (name, description) => {
   cy.get('#create-group--button', { timeout: 10000 }).click();
   cy.get('#access-group--name').type(name);
   cy.get('#access-group--description').type(description);
-  cy.get('#app .bx--modal-footer.bx--btn-set .bx--btn.bx--btn--primary').click();
+  cy.get('#app .bx--modal-footer .bx--btn.bx--btn--primary').click();
   cy.url().should('include', '/iam/groups/AccessGroupId-');
   cy.get('.pal--page-header__title-text', { timeout: 10000 }).should('contain', name);
 });

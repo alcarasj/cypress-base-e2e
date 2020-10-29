@@ -19,6 +19,10 @@ import './commands'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
+if (!Cypress.env('EMAIL') || !Cypress.env('PASSWORD')) {
+  throw new Error('CYPRESS_EMAIL and CYPRESS_EMAIL need to be set!');
+}
+
 before(() => {
   cy.visit('/logout');
   cy.login(Cypress.env('EMAIL'), Cypress.env('PASSWORD'));
